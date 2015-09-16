@@ -8,7 +8,7 @@ import play.api.test.Helpers._
 import play.api.test._
 
 @RunWith(classOf[JUnitRunner])
-class ConfigurationSpec extends Specification with TestGuiceApplicationBuilder {
+class ConfigurationControllerSpec extends Specification with TestGuiceApplicationBuilder {
 
   "Configuration controller" should {
 
@@ -16,7 +16,7 @@ class ConfigurationSpec extends Specification with TestGuiceApplicationBuilder {
       route(FakeRequest(GET, "/api/configuration/webcam")) must beSome.which { response =>
         status(response) === OK
         contentType(response) === Some("application/json")
-        (contentAsJson(response) \ "prefix").as[String] === "/api/test"
+        (contentAsJson(response) \ "prefix").as[String] === "/api/fake/test?"
         (contentAsJson(response) \ "actions").as[Seq[String]] must not be empty
       }
     }

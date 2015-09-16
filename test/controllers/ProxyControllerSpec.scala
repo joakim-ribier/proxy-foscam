@@ -9,7 +9,7 @@ import play.api.test.Helpers._
 import play.api.test._
 
 @RunWith(classOf[JUnitRunner])
-class ProxySpec extends Specification with TestGuiceApplicationBuilder {
+class ProxyControllerSpec extends Specification with TestGuiceApplicationBuilder {
 
   "GET [/api/proxy/:cmd]" should {
 

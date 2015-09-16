@@ -12,7 +12,8 @@ trait TestGuiceApplicationBuilder {
     .configure(
       Configuration(
         "proxy.authentication" -> false,
-        "webcam.api.prefix" -> "/api/test"))
+        "webcam.address" -> "http://localhost:3333",
+        "webcam.api.prefix" -> "/api/fake/test?"))
     .overrides(mockModule)
     .build
 
