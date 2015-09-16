@@ -10,8 +10,8 @@ import services.UrlFactoryService
 class UrlFactoryServiceImpl @Inject() (
   appConfig: Config) extends UrlFactoryService {
 
-  private val appWebcam = appConfig.get[AppWebcam]("webcam")
-  private val appWebcamApi = appConfig.get[AppWebcamApi]("webcam.api")
+  protected def appWebcam = appConfig.get[AppWebcam]("webcam")
+  protected def appWebcamApi = appConfig.get[AppWebcamApi]("webcam.api")
 
   override def build(cmd: String, paramsOpt: Option[JsValue]): String = {
     val auth: String = s"usr=${appWebcam.user}&pwd=${appWebcam.password}"
