@@ -13,5 +13,5 @@ GET        /api/configuration/webcam                       controllers.Configura
 PUT        /api/proxy/:cmd                                 controllers.ProxyController.set(cmd: String)
 GET        /api/proxy/:cmd                                 controllers.ProxyController.get(cmd: String)
 
-# Test controller
-GET        /api/test                                       controllers.TestController.test
+# Fake controller
+GET        /api/fake/test                                  controllers.FakeController.test

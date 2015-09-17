@@ -34,7 +34,7 @@
   </logger>
 
   <!-- Ning low-level traces -->
-  <logger name="com.ning.http.client" level="ERROR" />
+  <logger name="com.ning.server.client" level="ERROR" />
 
   <root level="INFO">
     <appender-ref ref="FILE" />

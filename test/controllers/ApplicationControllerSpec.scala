@@ -8,7 +8,7 @@ import play.api.test.Helpers._
 import play.api.test._
 
 @RunWith(classOf[JUnitRunner])
-class ApplicationSpec extends Specification with TestGuiceApplicationBuilder {
+class ApplicationControllerSpec extends Specification with TestGuiceApplicationBuilder {
 
   "Application controller" should {
 
